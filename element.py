@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import random
+import requests as rq
 import colorama
 from colorama import Fore, Back, Style, init
 init()
