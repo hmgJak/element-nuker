@@ -12,7 +12,7 @@ TOKEN = input("Token:")
 headers = {'Authorization': f'Bot {TOKEN}'}
 chNames = ['heil hmg', 'heil hmg', 'heil hmg', 'heil hmg']
 rNames = ['Nuked By Jak | Heil the Guard', 'Nuked By Jak | Heil the Guard']
-SPAM = "@everyone https://cdn.discordapp.com/attachments/1086450936295194625/1096192512554713138/lv_0_20230411200517.mp4 https://discord.gg/rdXHweYQ7f"
+SPAM = "@everyone https://cdn.discordapp.com/attachments/1086450936295194625/1096192512554713138/lv_0_20230411200517.mp4  https://discord.gg/rdXHweYQ7f"
 rq = rq_.Session()
 
 Sachs = commands.Bot(command_prefix=prefix, intents=intents, case_insensitive=True)
