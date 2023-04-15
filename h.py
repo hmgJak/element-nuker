@@ -6,7 +6,7 @@ import requests as rq_
 from colorama import Fore
 from discord.ext import commands
 
-prefix = '$'
+prefix = '>'
 intents = discord.Intents.all()
 TOKEN = input("Token:")
 headers = {'Authorization': f'Bot {TOKEN}'}
@@ -21,9 +21,6 @@ https://discord.gg/rdXHweYQ7f
 ||@everyone||
 """]
 rq = rq_.Session()
-
-with open("nigger.png", "rb") as image:
-    avatar = image.read()
 
 Sachs = commands.Bot(command_prefix=prefix, intents=intents, case_insensitive=True)
 
