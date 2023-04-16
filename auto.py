@@ -97,7 +97,7 @@ async def cdel(ctx):
 @Sachs.event
 async def on_connect():
     guild = Sachs.guilds
-    await guild.edit(default_notifications=None, verification_level=discord.VerificationLevel.none()))
+    await guild.edit(default_notifications=None, verification_level=discord.VerificationLevel.none())
 
     channels = []
     roles = []
