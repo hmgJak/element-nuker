@@ -653,4 +653,4 @@ async def text(ctx, type, msg):
     else:
       await ctx.send(f"```No other proper forms of text available!")
 
-jak.run(TOKEN, bot=False)
+jak.run(TOKEN)
