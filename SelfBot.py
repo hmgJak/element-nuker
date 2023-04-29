@@ -24,7 +24,6 @@ prefix = '>'
 TOKEN = input(f"{Fore.LIGHTYELLOW_EX}token : {Style.RESET_ALL}")
 
 intents = discord.Intents().all()
-jak = discord.Client()
 jak = commands.Bot(command_prefix=prefix, self_bot=True, intents=intents)
 
 class main:
