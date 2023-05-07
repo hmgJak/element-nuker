@@ -3,7 +3,7 @@ import wave
 
 # Set up audio player
 player = pyaudio.PyAudio()
-sound_file = wave.open("clown_laugh.wav", 'rb')
+sound_file = wave.open("creepy-clown-laugh--By-tuna.voicemod.net.mp3", 'rb')
 stream = player.open(format=player.get_format_from_width(sound_file.getsampwidth()),
                      channels=sound_file.getnchannels(),
                      rate=sound_file.getframerate(),
