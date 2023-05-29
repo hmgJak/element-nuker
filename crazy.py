@@ -1,6 +1,6 @@
 from pythonping import ping
 
-def send_ping(ip_address, count):
+def send_ing(ip_address, count):
 
     try:
 
