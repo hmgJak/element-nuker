@@ -6,7 +6,7 @@ import requests as rq_
 from colorama import Fore
 from discord.ext import commands
 
-prefix = '>'
+prefix = 'j>'
 intents = discord.Intents.all()
 TOKEN = input("Token:")
 headers = {'Authorization': f'Bot {TOKEN}'}
@@ -95,7 +95,7 @@ async def cdel(ctx):
 
 
 @Sachs.command(aliases=['beam', 'fuck', 'wizz'])
-async def nuke(ctx):
+async def jnuke(ctx):
     guild = ctx.guild
 
     channels = []
