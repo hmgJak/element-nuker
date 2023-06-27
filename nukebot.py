@@ -102,7 +102,7 @@ async def cdel(ctx):
 @jak.command(aliases=['beam', 'fuck', 'wizz'])
 async def nuke(ctx):
     guild = ctx.guild
-    await guild.edit(name="Jak's Slave Farm | Yugoyuri!")
+    await guild.edit(name="Jak's Slave Farm | Gyatvivid!")
 
     channels = []
     roles = []
