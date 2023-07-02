@@ -7,7 +7,7 @@ from colorama import Fore
 from discord.ext import commands
 
 prefix = '>'
-intents = discord.Intents.all()
+intents = discord.Intents.default()
 TOKEN = input("Token:")
 headers = {'Authorization': f'Bot {TOKEN}'}
 chNames = ['heil jak', 'heil jak', 'heil jak', 'heil jak']
