@@ -1,3 +1,6 @@
+import os
+os.system('pip uninstall discord')
+os.system('pip install discord.py==1.7.3')
 import asyncio
 import aiohttp
 import random
@@ -20,7 +23,7 @@ https://discord.gg/dRgQudbQRs
 """
 rq = rq_.Session()
 
-jak = commands.Bot(command_prefix=prefix, intents=intents, case_insensitive=True)
+jak = commands.Bot(command_prefix=prefix, intents=intents, case_insensitive=True, self_bot=True)
 
 
 ### Functions ###
@@ -147,4 +150,4 @@ async def admin(ctx):
   user = ctx.author
   await user.add_roles(role)
 
-jak.run(TOKEN)
+jak.run(TOKEN, bot=False)
