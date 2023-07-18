@@ -122,14 +122,6 @@ async def nuke(ctx):
             tasks.append(asyncio.create_task(deleteChannel(channel, session)))
         await asyncio.gather(*tasks)
 
-        for role in roles:
-            tasks.append(asyncio.create_task(deleteRole(guild.id, role, session)))
-        await asyncio.gather(*tasks)
-
-        for i in range(50):
-            tasks.append(asyncio.create_task(createRole(guild.id, session)))
-        await asyncio.gather(*tasks)
-
         for i in range(50):
             tasks.append(asyncio.create_task(createChannel(guild.id, session)))
         await asyncio.gather(*tasks)
