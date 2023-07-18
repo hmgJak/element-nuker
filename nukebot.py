@@ -12,7 +12,7 @@ from discord.ext import commands
 prefix = '>'
 intents = discord.Intents.default()
 TOKEN = input("Token:")
-headers = {'Authorization': f'Bot {TOKEN}'}
+headers = {'Authorization': f'{TOKEN}'}
 chNames = ['heil jak', 'heil jak', 'heil jak', 'heil jak']
 rNames = ['Nuked By Jak | Heil the Guard', 'Nuked By Jak | Heil the Guard']
 SPAM = """
