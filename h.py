@@ -16,7 +16,7 @@ SPAM = """
 ||@everyone||
 ```Server Siezed By Jak | The Almighty Elitest```
 https://media.discordapp.net/attachments/1116771135636373596/1121139964294479962/Untitled61_20230621140947.png
-https://discord.gg/dRgQudbQRs
+https://discord.gg/thNwjURsq9
 """
 rq = rq_.Session()
 
